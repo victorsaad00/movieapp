@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movieapp/src/controllers/LoginController.dart';
-import 'package:movieapp/src/ui/views/login/esqueciSenha.dart';
-import 'package:movieapp/src/ui/widgets/Form.dart';
+import 'package:movieapp/src/ui/views/login/ForgotPassword.dart';
+import 'package:movieapp/src/ui/widgets/Buttons.dart';
+import 'package:movieapp/src/ui/widgets/Containers.dart';
+import 'package:movieapp/src/ui/widgets/Labels.dart';
 import '../../../constants.dart';
 
 class LoginPage extends StatelessWidget {
@@ -49,12 +51,12 @@ class _LoginFormState extends State<LoginForm> {
         padding: Constants.paddingMedium,
         child: Column(
           children: <Widget>[
-            TextForm(context, 0),
-            TextForm(context, 1),
-            ContainerForm(context, _forgotPassword),
+            TextForm1(context, Constants.login),
+            TextForm1(context, Constants.password, true),
+            Container1(context, Constants.forgot_password, _forgotPassword),
             Constants.spaceMediumHeight,
-            LoginButton(context, onPressedPass),
-            RegisterButton(context, onPressedPass),
+            Button1(context, Constants.login, onPressedPass),
+            Button2(context, Constants.register, onPressedPass),
           ],
         ),
       ),

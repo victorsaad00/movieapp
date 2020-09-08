@@ -1,14 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants.dart';
+
 final mDialog = _mDialog();
 
 class _mDialog {
 
   void showInfo({@required context,
-        title = 'Sucesso',
-        message = 'Operação realizada com sucesso.',
-        buttonLabel = 'Fechar',
+        title = Constants.success,
+        message = Constants.success_message,
+        buttonLabel = Constants.close,
         buttonPressed}) {
     var dialog = AlertDialog(
       title: Text(title),
