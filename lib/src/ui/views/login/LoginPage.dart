@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movieapp/src/controllers/LoginController.dart';
+import 'package:movieapp/src/ui/views/login/esqueciSenha.dart';
 import 'package:movieapp/src/ui/widgets/Form.dart';
 import '../../../constants.dart';
 
@@ -27,13 +28,16 @@ class LoginForm extends StatefulWidget {
   _LoginFormState createState() => _LoginFormState();
 }
 
-
 class _LoginFormState extends State<LoginForm> {
   final _controller = LoginFormController();
 
   @override void dispose() {
     _controller.dispose();
     super.dispose();
+  }
+
+  void _forgotPassword(){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetPasswordResetPage()));
   }
 
   void onPressedPass() => null;
@@ -47,7 +51,7 @@ class _LoginFormState extends State<LoginForm> {
           children: <Widget>[
             TextForm(context, 0),
             TextForm(context, 1),
-            ContainerForm(context, onPressedPass),
+            ContainerForm(context, _forgotPassword),
             Constants.spaceMediumHeight,
             LoginButton(context, onPressedPass),
             RegisterButton(context, onPressedPass),
