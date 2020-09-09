@@ -9,6 +9,7 @@ class Constants {
   static const spaceSmallHeight = SizedBox(height: 8.0);
   static const spaceMediumHeight = SizedBox(height: 16.0);
 
+
   static const login = 'Login';
   static const password = 'Senha';
   static const forgot_password = 'Esqueci minha senha';
@@ -18,4 +19,9 @@ class Constants {
   static const success = 'Sucesso';
   static const success_message = 'Operação realizada com sucesso';
   static const close = 'Fechar';
+  static const E_mail = 'E-mail*';
+  static const new_pass = 'Nova Senha*';
+  static const pass = 'Senha*';
+  static const con_pass = 'Confirmação de Nova Senha*';
+
 }

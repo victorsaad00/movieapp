@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movieapp/src/controllers/LoginController.dart';
 import 'package:movieapp/src/ui/views/login/ForgotPassword.dart';
+import 'package:movieapp/src/ui/views/login/register.dart';
 import 'package:movieapp/src/ui/widgets/Buttons.dart';
 import 'package:movieapp/src/ui/widgets/Containers.dart';
 import 'package:movieapp/src/ui/widgets/Labels.dart';
@@ -41,7 +42,9 @@ class _LoginFormState extends State<LoginForm> {
   void _forgotPassword(){
     Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetPasswordResetPage()));
   }
-
+  void _registerUser(){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterUserPage()));
+  }
   void onPressedPass() => null;
 
   @override
@@ -56,7 +59,7 @@ class _LoginFormState extends State<LoginForm> {
             Container1(context, Constants.forgot_password, _forgotPassword),
             Constants.spaceMediumHeight,
             Button1(context, Constants.login, onPressedPass),
-            Button2(context, Constants.register, onPressedPass),
+            Button2(context, Constants.register, _registerUser),
           ],
         ),
       ),

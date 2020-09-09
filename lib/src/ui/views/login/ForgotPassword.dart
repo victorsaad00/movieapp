@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../../views/helper/Helper.dart';
 import '../../../constants.dart';
 import '../../views/dialog.dart';
+import 'package:movieapp/src/ui/widgets/Labels.dart';
+//import 'package:movieapp/src/ui/Theme.dart';
 
 
 class ForgetPasswordResetPage extends StatelessWidget {
@@ -53,39 +55,13 @@ class ResetPasswordFormState extends State<ResetPasswordForm> {
         padding: Constants.paddingMedium,
         child: Column(
           children: <Widget>[
-            TextFormField(
-              keyboardType: TextInputType.emailAddress,
-              decoration: const InputDecoration(labelText: 'E-mail*'),
-              validator: (String value) {
-                return value.isEmpty ? 'Email inválido.' : null;
-              },
-            ),
+            TextFormFieldValidator(TextInputType.emailAddress, false, 'Confirme seu E-mail*', 'Email inválido.'),
             Constants.spaceSmallHeight,
-            TextFormField(
-              keyboardType: TextInputType.visiblePassword,
-              obscureText: true,
-              decoration: const InputDecoration(labelText: 'Nova Senha*'),
-              validator: (String value) {
-                return value.isEmpty ? 'Senha inválida.' : null;
-              },
-            ),
-            Constants.spaceSmallHeight,
-            TextFormField(
-              keyboardType: TextInputType.visiblePassword,
-              obscureText: true,
-              decoration:
-              const InputDecoration(labelText: 'Confirmação de Nova Senha*'),
-              validator: (String value) {
-                return value.isEmpty
-                    ? 'As senhas digitadas não são iguais.'
-                    : null;
-              },
-            ),
-            Constants.spaceMediumHeight,
             SizedBox(
               width: double.infinity,
               child: RaisedButton(
-                child: Text('Salvar'),
+                color: Theme.of(context).colorScheme.surface,
+                child: Text('Enviar'),
                 onPressed: _register,
               ),
             ),
