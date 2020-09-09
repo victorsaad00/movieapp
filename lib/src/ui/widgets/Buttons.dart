@@ -2,21 +2,22 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../constants.dart';
 
-Widget Button1(context, text, onPressed) {
+Widget SelectFlatButton(context, text, function) {
+  return FlatButton(
+    child: Text(text),
+    padding: Constants.paddingSmall,
+    onPressed: function,
+  );
+}
+
+Widget SelectButton(context, text, function){
   return SizedBox(
     width: double.infinity,
     child: RaisedButton(
-      color: Theme.of(context).colorScheme.surface,
       child: Text(text),
-      onPressed: onPressed,
+      color: Theme.of(context).colorScheme.surface,
+      onPressed: function,
     ),
   );
 }
 
-Widget Button2(context, text, onPressed) {
-  return FlatButton(
-    child: Text(text),
-    padding: Constants.paddingSmall,
-    onPressed: onPressed,
-  );
-}

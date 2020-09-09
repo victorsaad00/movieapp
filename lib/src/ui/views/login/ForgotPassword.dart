@@ -4,7 +4,7 @@ import '../../views/helper/Helper.dart';
 import '../../../constants.dart';
 import '../../views/dialog.dart';
 import 'package:movieapp/src/ui/widgets/Labels.dart';
-//import 'package:movieapp/src/ui/Theme.dart';
+import 'package:movieapp/src/ui/widgets/Buttons.dart';
 
 
 class ForgetPasswordResetPage extends StatelessWidget {
@@ -38,7 +38,7 @@ class ResetPasswordFormState extends State<ResetPasswordForm> {
 
     mDialog.showInfo(
       context: context,
-      message: 'Seu cadastro foi realizado com sucesso.',
+      message: 'Um novo Email foi enviado para sua senha ser alterada.',
       buttonPressed: () => Helper..back(context)..back(context),
     );
   }
@@ -57,19 +57,8 @@ class ResetPasswordFormState extends State<ResetPasswordForm> {
           children: <Widget>[
             TextFormFieldValidator(TextInputType.emailAddress, false, 'Confirme seu E-mail*', 'Email inválido.'),
             Constants.spaceSmallHeight,
-            SizedBox(
-              width: double.infinity,
-              child: RaisedButton(
-                color: Theme.of(context).colorScheme.surface,
-                child: Text('Enviar'),
-                onPressed: _register,
-              ),
-            ),
-            FlatButton(
-              child: Text('Cancelar'),
-              padding: Constants.paddingSmall,
-              onPressed: _cancel,
-            ),
+            SelectButton(context, 'Enviar', _register),
+            SelectFlatButton(context, 'Cancelar', _cancel),
           ],
         ),
       ),

@@ -4,6 +4,7 @@ import '../../views/helper/Helper.dart';
 import '../../../constants.dart';
 import '../../views/dialog.dart';
 import 'package:movieapp/src/ui/widgets/Labels.dart';
+import 'package:movieapp/src/ui/widgets/Buttons.dart';
 
 
 class RegisterUserPage extends StatelessWidget {
@@ -55,7 +56,7 @@ class RegisterUserFormState extends State<RegisterUserForm> {
           padding: Constants.paddingMedium,
           child: Column(
             children: <Widget>[
-              TextFormFieldValidator(TextInputType.visiblePassword, false, 'Nome*', 'Nome invalido'),
+              TextFormFieldValidator(TextInputType.visiblePassword, false, Constants.nome, Constants.inNome),
               Constants.spaceSmallHeight,
               TextFormFieldValidator(TextInputType.emailAddress, false, Constants.E_mail, Constants.invalidPassword),
               Constants.spaceSmallHeight,
@@ -63,21 +64,10 @@ class RegisterUserFormState extends State<RegisterUserForm> {
               Constants.spaceSmallHeight,
               TextFormFieldValidator(TextInputType.visiblePassword, true, Constants.con_pass, Constants.invalidPassword),
               Constants.spaceSmallHeight,
-              TextFormFieldValidator(TextInputType.visiblePassword, false, 'Numero', 'Numero Invalido'),
+              TextFormFieldValidator(TextInputType.visiblePassword, false, Constants.numero_cell, Constants.inNumberCell),
               Constants.spaceSmallHeight,
-              SizedBox(
-                width: double.infinity,
-                child: RaisedButton(
-                  child: Text('Registrar'),
-                  color: Theme.of(context).colorScheme.surface,
-                  onPressed: _register,
-                ),
-              ),
-              FlatButton(
-                child: Text('Cancelar'),
-                padding: Constants.paddingSmall,
-                onPressed: _cancel,
-              ),
+              SelectButton(context, 'Registrar', _register),
+              SelectFlatButton(context, 'Cancelar', _cancel),
             ],
           ),
         ),
