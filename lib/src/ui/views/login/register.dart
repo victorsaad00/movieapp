@@ -61,7 +61,7 @@ class RegisterUserFormState extends State<RegisterUserForm> {
               Constants.spaceSmallHeight,
               TextFormFieldValidator(TextInputType.visiblePassword, true, Constants.pass, Constants.invalidPassword),
               Constants.spaceSmallHeight,
-              TextFormFieldValidator(TextInputType.visiblePassword, true, Constants.new_pass, Constants.invalidPassword),
+              TextFormFieldValidator(TextInputType.visiblePassword, true, Constants.con_pass, Constants.invalidPassword),
               Constants.spaceSmallHeight,
               TextFormFieldValidator(TextInputType.visiblePassword, false, 'Numero', 'Numero Invalido'),
               Constants.spaceSmallHeight,

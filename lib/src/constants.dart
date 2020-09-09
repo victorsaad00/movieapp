@@ -22,6 +22,6 @@ class Constants {
   static const E_mail = 'E-mail*';
   static const new_pass = 'Nova Senha*';
   static const pass = 'Senha*';
-  static const con_pass = 'Confirmação de Nova Senha*';
+  static const con_pass = 'Confirmação de Senha*';
 
 }
