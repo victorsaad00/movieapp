@@ -13,3 +13,5 @@ final ThemeData MovieAppThemeData = new ThemeData(
     primaryColor: Colors.darkGray,
     accentColor: Colors.lightGray,
 );
+
+//Theme.of(context).colorScheme.surface

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:movieapp/src/ui/views/login/movieRate.dart';
 import '../../views/helper/Helper.dart';
 import '../../../constants.dart';
 import '../../views/dialog.dart';
@@ -34,13 +35,17 @@ class RegisterUserFormState extends State<RegisterUserForm> {
 
     final _formKey = GlobalKey<FormState>();
 
+    void _ratePagePointer(){
+      Navigator.push(context, MaterialPageRoute(builder: (context) => MovieRatePage()));
+    }
+
     void _register() {
       if (!_formKey.currentState.validate()) return;
 
-      mDialog.showInfo(
+      mDialog.showNext(
         context: context,
         message: 'Seu cadastro foi realizado com sucesso.',
-        buttonPressed: () => Helper..back(context)..back(context),
+        buttonPressed: () => _ratePagePointer(),
       );
     }
 

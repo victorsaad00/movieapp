@@ -27,6 +27,7 @@ class Constants {
   static const numero_cell = 'Numero do Celular*';
   static const inNumberCell = 'Numero Invalido';
   static const inNome = 'Nome invalido';
-
+  static const next = 'Proximo';
+  static const cancel = 'Cancelar';
 
 }

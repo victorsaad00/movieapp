@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movieapp/src/controllers/LoginController.dart';
+import 'package:movieapp/src/ui/views/home/homePage.dart';
 import 'package:movieapp/src/ui/views/login/ForgotPassword.dart';
 import 'package:movieapp/src/ui/views/login/register.dart';
 import 'package:movieapp/src/ui/widgets/Buttons.dart';
@@ -45,6 +46,13 @@ class _LoginFormState extends State<LoginForm> {
   void _registerUser(){
     Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterUserPage()));
   }
+
+  void _goToHomePage(){
+    //Precisa validar o login obviamente.
+    Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
+
+  }
+
   void onPressedPass() => null;
 
   @override
@@ -58,7 +66,7 @@ class _LoginFormState extends State<LoginForm> {
             TextForm1(context, Constants.password, true),
             Container1(context, Constants.forgot_password, _forgotPassword),
             Constants.spaceMediumHeight,
-            SelectButton(context, Constants.login, onPressedPass),
+            SelectButton(context, Constants.login, _goToHomePage),
             SelectFlatButton(context, Constants.register, _registerUser),
           ],
         ),
