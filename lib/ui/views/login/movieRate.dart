@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import '../../views/helper/Helper.dart';
 import '../../../constants.dart';
 import '../../views/dialog.dart';
-import 'package:movieapp/src/ui/widgets/Labels.dart';
-import 'package:movieapp/src/ui/widgets/Buttons.dart';
+
 
 
 class MovieRatePage extends StatelessWidget {

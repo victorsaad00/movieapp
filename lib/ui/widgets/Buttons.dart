@@ -49,3 +49,7 @@ Widget HomeButtons(context, f_avaliar, f_sugestao){
   );
 }
 
+Widget UserEditerButton(context) {
+
+}
+

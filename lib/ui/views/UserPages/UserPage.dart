@@ -1,12 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:movieapp/src/ui/objects/User.dart';
-import 'package:movieapp/src/ui/views/UserPages/EditUser.dart';
-import '../../views/helper/Helper.dart';
-import '../../../constants.dart';
-import '../../views/dialog.dart';
-import 'package:movieapp/src/ui/widgets/Labels.dart';
-import 'package:movieapp/src/ui/widgets/Buttons.dart';
+import 'package:movieapp/ui/objects/User.dart';
+import 'package:movieapp/ui/views/helper/Helper.dart';
+import 'package:movieapp/ui/widgets/Buttons.dart';
 
 
 class UserPage extends StatelessWidget {
@@ -47,10 +43,6 @@ class UserPage extends StatelessWidget {
     );
   }
 
-  void _editUserPageRouter(context){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => EditUserPage()));
-  }
-
   DrawerHeader _buildDrawerHeader(){
     return DrawerHeader(
         decoration: BoxDecoration(
@@ -76,13 +68,13 @@ class UserPage extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.movie_creation),
             title: Text('Home'),
-            onTap: () => _onPressedPass(),
+            onTap: () => Helper.go(context, '/Home'),
           ),
           Divider(),
           ListTile(
             leading: Icon(Icons.local_movies),
             title: Text('Editar Conta'),
-            onTap: () => _editUserPageRouter(context),
+            onTap: () => Helper.go(context, '/EditUser'),
           ),
           Divider(),
           ListTile(
@@ -94,7 +86,7 @@ class UserPage extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('Sair'),
-            onTap: () => _onPressedPass(),
+            onTap: () => Helper.exit(context),
           ),
         ],
       ),

@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:movieapp/src/ui/views/login/movieRate.dart';
+import 'package:movieapp/ui/views/login/movieRate.dart';
 import '../../views/helper/Helper.dart';
 import '../../../constants.dart';
 import '../../views/dialog.dart';
-import 'package:movieapp/src/ui/widgets/Labels.dart';
-import 'package:movieapp/src/ui/widgets/Buttons.dart';
+import 'package:movieapp/ui/widgets/Labels.dart';
+import 'package:movieapp/ui/widgets/Buttons.dart';
 
 
 class RegisterUserPage extends StatelessWidget {

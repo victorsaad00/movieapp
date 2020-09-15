@@ -27,3 +27,14 @@ Widget TextFormFieldValidator(textInput, obscureTextValidator, inDecorationLabel
   );
 }
 
+Widget UserTextFormField(user, textInputType, LabelText, invalidValueName, userNewProperty){
+  return TextFormField(
+    keyboardType: textInputType,
+    decoration: InputDecoration(labelText: LabelText),
+    validator: (String value) {
+      return value.isEmpty ? invalidValueName : null;
+    },
+    initialValue: user.name,
+    onSaved: (newValue) => user.userNewProperty = newValue,
+  );
+}

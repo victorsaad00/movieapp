@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:movieapp/src/controllers/LoginController.dart';
-import 'package:movieapp/src/ui/views/UserPages/UserPage.dart';
-import 'package:movieapp/src/ui/views/login/ForgotPassword.dart';
-import 'package:movieapp/src/ui/views/login/register.dart';
-import 'package:movieapp/src/ui/widgets/Buttons.dart';
-import 'package:movieapp/src/ui/widgets/Containers.dart';
-import 'package:movieapp/src/ui/widgets/Labels.dart';
+import 'package:movieapp/controllers/LoginController.dart';
+import 'package:movieapp/ui/views/UserPages/UserPage.dart';
+import 'package:movieapp/ui/views/login/ForgotPassword.dart';
+import 'package:movieapp/ui/views/login/register.dart';
+import 'package:movieapp/ui/widgets/Buttons.dart';
+import 'package:movieapp/ui/widgets/Containers.dart';
+import 'package:movieapp/ui/widgets/Labels.dart';
 import '../../../constants.dart';
 
 class LoginPage extends StatelessWidget {
@@ -43,14 +43,14 @@ class _LoginFormState extends State<LoginForm> {
   void _forgotPassword(){
     Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetPasswordResetPage()));
   }
+
   void _registerUser(){
     Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterUserPage()));
   }
 
+  //Precisa validar o login obviamente.
   void _goToUserPage(){
-    //Precisa validar o login obviamente.
     Navigator.push(context, MaterialPageRoute(builder: (context)=> UserPage()));
-
   }
 
   void onPressedPass() => null;

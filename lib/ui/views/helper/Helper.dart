@@ -28,4 +28,8 @@ class _Helper {
     Navigator.pushNamedAndRemoveUntil(
         context, '/', (Route<dynamic> route) => false);
   }
+
+  Object getRouteArgs(context) {
+    return ModalRoute.of(context).settings.arguments;
+  }
 }
