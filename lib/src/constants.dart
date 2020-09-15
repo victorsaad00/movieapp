@@ -24,6 +24,7 @@ class Constants {
   static const pass = 'Senha*';
   static const con_pass = 'Confirmação de Senha*';
   static const nome = 'Nome*';
+  static const last_name = 'Sobrenome';
   static const numero_cell = 'Numero do Celular*';
   static const inNumberCell = 'Numero Invalido';
   static const inNome = 'Nome invalido';

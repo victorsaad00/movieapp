@@ -63,6 +63,8 @@ class RegisterUserFormState extends State<RegisterUserForm> {
             children: <Widget>[
               TextFormFieldValidator(TextInputType.visiblePassword, false, Constants.nome, Constants.inNome),
               Constants.spaceSmallHeight,
+              TextFormFieldValidator(TextInputType.visiblePassword, false, Constants.last_name, Constants.inNome),
+              Constants.spaceSmallHeight,
               TextFormFieldValidator(TextInputType.emailAddress, false, Constants.E_mail, Constants.invalidPassword),
               Constants.spaceSmallHeight,
               TextFormFieldValidator(TextInputType.visiblePassword, true, Constants.pass, Constants.invalidPassword),

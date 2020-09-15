@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../constants.dart';
 
+
 Widget SelectFlatButton(context, text, function) {
   return FlatButton(
     child: Text(text),
@@ -22,9 +23,9 @@ Widget SelectButton(context, text, function){
 }
 
 Widget HomeButtons(context, f_avaliar, f_sugestao){
-  return Column(
+  return Row(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: [
+    children: <Widget> [
       Container(
         height: 150,
         width: 150,
@@ -34,6 +35,7 @@ Widget HomeButtons(context, f_avaliar, f_sugestao){
           onPressed: f_avaliar, //Implementar
         )
       ),
+      Container(width: 50),
       Container(
           height: 150,
           width: 150,

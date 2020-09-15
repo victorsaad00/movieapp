@@ -25,9 +25,8 @@ class ForgetPasswordResetPage extends StatelessWidget {
 
 class ResetPasswordForm extends StatefulWidget {
   @override
-  ResetPasswordFormState createState() {
-    return ResetPasswordFormState();
-  }
+  ResetPasswordFormState createState() => ResetPasswordFormState();
+
 }
 
 class ResetPasswordFormState extends State<ResetPasswordForm> {
