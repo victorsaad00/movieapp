@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:movieapp/ui/views/helper/Helper.dart';
 import '../../constants.dart';
 
 
@@ -22,7 +23,7 @@ Widget SelectButton(context, text, function){
   );
 }
 
-Widget HomeButtons(context, f_avaliar, f_sugestao){
+Widget HomeButtons(context, f_Avaliar, f_sugestao){
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: <Widget> [
@@ -32,7 +33,7 @@ Widget HomeButtons(context, f_avaliar, f_sugestao){
         child: RaisedButton(
           color: Color(0xFF212121),
           child: Text('Avaliar'),
-          onPressed: f_avaliar, //Implementar
+          onPressed: f_Avaliar,
         )
       ),
       Container(width: 50),
@@ -42,14 +43,14 @@ Widget HomeButtons(context, f_avaliar, f_sugestao){
           child: RaisedButton(
             color: Color(0xFF212121),
             child: Text('Sugestao'),
-            onPressed: f_sugestao, //Implementar
-          )
+            onPressed: f_sugestao
+          ),
       ),
     ],
   );
 }
 
-Widget UserEditerButton(context) {
-
-}
+/*Widget UserEditerButton(context) {
+  // se for o caso de fazer um botao pra editar cada atributo do user.
+}*/
 

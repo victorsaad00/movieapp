@@ -29,7 +29,7 @@ Widget TextFormFieldValidator(textInput, obscureTextValidator, inDecorationLabel
 
 Widget UserTextFormField(user, textInputType, LabelText, invalidValueName, userNewProperty){
   return TextFormField(
-    keyboardType: textInputType,
+    keyboardType: TextInputType.name,
     decoration: InputDecoration(labelText: LabelText),
     validator: (String value) {
       return value.isEmpty ? invalidValueName : null;

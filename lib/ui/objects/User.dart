@@ -42,14 +42,19 @@ class MaintainUserPage extends StatelessWidget {
                 alignment: WrapAlignment.center,
                 runSpacing: Constants.spaceSmallHeight.height,
                 children: <Widget>[
-                    InkWell(
+                    /*InkWell(
                         onTap:() => _callEditUser(user, TextInputType.name, Constants.nome, 'Nome Invalido', user.name),
                         child: Container(
                           child: Text('Mudar Nome'),
                           padding: Constants.paddingSmall,
                       ),
-                    ),
-
+                    ),*/
+                    // tentar colocar um botao pra editar separadamente.
+                    UserTextFormField(user,  TextInputType.name, Constants.nome, 'Nome invalido!', user.name),
+                    UserTextFormField(user,  TextInputType.name, Constants.last_name, 'Nome invalido!', user.last_name),
+                    UserTextFormField(user,  TextInputType.emailAddress, Constants.E_mail, 'Email invalido!', user.email),
+                    // Tem que editar p n trocar senha assim
+                    UserTextFormField(user,  TextInputType.text, Constants.new_pass, 'Senha invalida!', user.password),
                 ],
             ),
         ); // user form page

@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movieapp/ui/objects/User.dart';
+import 'package:movieapp/ui/views/UserPages/rate.dart';
+import 'package:movieapp/ui/views/UserPages/sugestion.dart';
 import 'package:movieapp/ui/views/helper/Helper.dart';
 import 'package:movieapp/ui/widgets/Buttons.dart';
 
@@ -18,12 +20,22 @@ class UserPage extends StatelessWidget {
       body: _homeBuildBody(context)
     );
   }
+  
+  _goToRatePage(context){
+      Navigator.push(context, MaterialPageRoute(builder: (context) => RatePage()));
+  }
 
+  _goToSugestionPage(context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => SugestionPage()));
+  }
+  
   Widget _homeBuildBody(context) {
     return Center(
       child: IntrinsicWidth(
-        child: HomeButtons(context, _onPressedPass, _onPressedPass),
-      )
+          child: HomeButtons(context,
+                 () =>_goToRatePage(context),
+                 () => _goToSugestionPage(context)),
+      ),
     );
   }
   
@@ -33,7 +45,7 @@ class UserPage extends StatelessWidget {
       title: Text('Home'),
       actions: <Widget>[
         IconButton (
-          onPressed: () => onPressedPass(),
+          onPressed: () => onPressedPass(), // implementar
           icon: Icon(
             Icons.search,
             color: Colors.white,
@@ -80,7 +92,7 @@ class UserPage extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.star_border),
             title: Text('Filmes Favoritos'),
-            onTap: () => _onPressedPass(),
+            onTap: () => Helper.go(context, '/FavoriteFilms'),
           ),
           Divider(),
           ListTile(
