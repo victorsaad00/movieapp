@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movieapp/ui/objects/User.dart';
-import 'package:movieapp/ui/views/UserPages/rate.dart';
-import 'package:movieapp/ui/views/UserPages/sugestion.dart';
+import 'package:movieapp/ui/views/UserPages/RatePage.dart';
+import 'package:movieapp/ui/views/UserPages/SugestionPage.dart';
 import 'package:movieapp/ui/views/helper/Helper.dart';
 import 'package:movieapp/ui/widgets/Buttons.dart';
 

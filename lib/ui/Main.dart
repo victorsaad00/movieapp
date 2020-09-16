@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movieapp/ui/views/UserPages/FavoriteFilmsPage.dart';
 import 'package:movieapp/ui/views/UserPages/UserPage.dart';
-import 'package:movieapp/ui/views/UserPages/rate.dart';
-import 'package:movieapp/ui/views/UserPages/sugestion.dart';
+import 'package:movieapp/ui/views/UserPages/RatePage.dart';
+import 'package:movieapp/ui/views/UserPages/SugestionPage.dart';
 import 'package:movieapp/ui/views/login/ForgotPassword.dart';
 import 'package:movieapp/ui/views/login/LoginPage.dart';
 import 'package:movieapp/ui/views/login/movieRate.dart';
