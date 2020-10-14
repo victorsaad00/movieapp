@@ -1,16 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../views/helper/Helper.dart';
 import '../../../constants.dart';
-import '../../views/dialog.dart';
-import 'package:movieapp/ui/widgets/Labels.dart';
-import 'package:movieapp/ui/widgets/Buttons.dart';
 
 // FavoriteFilmsPage
 // FavoriteFilmsPageForm
 // FavoriteFilmsPageFormState
-class FavoriteFilmsPage extends StatelessWidget {
-
+class FavoriteMoviesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +16,7 @@ class FavoriteFilmsPage extends StatelessWidget {
         children: <Widget>[
           Spacer(),
           Constants.spaceSmallHeight,
-          FavoriteFilmsPageForm(),
+          FavoriteMoviesPageForm(),
           Spacer(),
         ],
       ),
@@ -29,16 +24,16 @@ class FavoriteFilmsPage extends StatelessWidget {
   }
 }
 
-class FavoriteFilmsPageForm extends StatefulWidget {
+class FavoriteMoviesPageForm extends StatefulWidget {
   @override
   FavoriteFilmsPageFormState createState() => FavoriteFilmsPageFormState();
 }
 
-class FavoriteFilmsPageFormState extends State<FavoriteFilmsPageForm> {
+class FavoriteFilmsPageFormState extends State<FavoriteMoviesPageForm> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child:Row(),
+      child: Row(),
     );
   }
 }

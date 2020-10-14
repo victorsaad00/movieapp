@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movieapp/ui/views/UserPages/FavoriteFilmsPage.dart';
+import 'package:movieapp/ui/views/UserPages/FavoriteMoviesPage.dart';
 import 'package:movieapp/ui/views/UserPages/UserPage.dart';
 import 'package:movieapp/ui/views/UserPages/RatePage.dart';
 import 'package:movieapp/ui/views/UserPages/SugestionPage.dart';
@@ -8,8 +8,6 @@ import 'package:movieapp/ui/views/login/LoginPage.dart';
 import 'package:movieapp/ui/views/login/movieRate.dart';
 import 'package:movieapp/ui/views/login/register.dart';
 import 'Theme.dart';
-import 'objects/User.dart';
-import 'objects/films.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Movie recsys',
       theme: MovieAppThemeData,
       home: LoginPage(),
       initialRoute: '/',
@@ -25,9 +23,8 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  _buildRoutes(context){
-    return{
-      //'/': (context) => LoginPage(),
+  _buildRoutes(context) {
+    return {
       '/Home': (context) => UserPage(),
       '/EditUser': (context) => MaintainUserPage(),
       '/LoginPage': (context) => LoginPage(),
@@ -35,11 +32,9 @@ class MyApp extends StatelessWidget {
       '/Register': (context) => RegisterUserPage(),
       '/ForgottenPass': (context) => ForgetPasswordResetPage(),
       '/User': (context) => MaintainUserPage(),
-      '/Films': (context) => MaintainFilms(),
       '/RatePage': (context) => RatePage(),
       '/SugestionPage': (context) => SugestionPage(),
-      '/FavoriteFilms': (context) => FavoriteFilmsPage(),
+      '/FavoriteMovies': (context) => FavoriteMoviesPage(),
     };
   }
 }
-

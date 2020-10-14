@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Colors {
   Colors._();
   static const Color darkGray = Color(0xFF212121);
@@ -9,9 +8,9 @@ class Colors {
 }
 
 final ThemeData MovieAppThemeData = new ThemeData(
-    brightness: Brightness.dark,
-    primaryColor: Colors.darkGray,
-    accentColor: Colors.lightGray,
+  brightness: Brightness.dark,
+  primaryColor: Colors.darkGray,
+  accentColor: Colors.lightGray,
 );
 
 //Theme.of(context).colorScheme.surface

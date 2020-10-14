@@ -1,9 +1,9 @@
-import '../ui/objects/User.dart';
+import 'package:movieapp/models/User.dart';
 
 var userController = UserController();
 
 class UserController {
-  List<User> getAll(){
+  List<User> getAll() {
     return userController.getAll().whereType<User>().toList();
   }
 

@@ -4,8 +4,6 @@ import '../../views/helper/Helper.dart';
 import '../../../constants.dart';
 import '../../views/dialog.dart';
 
-
-
 class MovieRatePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -30,7 +28,6 @@ class MovieRatePageForm extends StatefulWidget {
 }
 
 class MovieRatePageFormState extends State<MovieRatePageForm> {
-
   final _formKey = GlobalKey<FormState>();
 
   void _rateMovieValidation() {
@@ -39,14 +36,15 @@ class MovieRatePageFormState extends State<MovieRatePageForm> {
     mDialog.showInfo(
       context: context,
       message: 'Sua Avaliacao foi realizada com sucesso.',
-      buttonPressed: () => Helper..back(context)..back(context), // Tem que ir pro 'home/pagina inicial'
+      buttonPressed: () => Helper
+        ..back(context)
+        ..back(context), // Tem que ir pro 'home/pagina inicial'
     );
   }
 
-  void _cancel(){
+  void _cancel() {
     Helper.back(context);
   }
-
 
   //Fazer a avaliacao de pelo menos 5 filmes.
   @override
@@ -55,7 +53,6 @@ class MovieRatePageFormState extends State<MovieRatePageForm> {
         key: _formKey,
         child: Padding(
           padding: Constants.paddingMedium,
-        )
-    );
+        ));
   }
 }
