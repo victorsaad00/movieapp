@@ -27,21 +27,12 @@ class EditUserPage extends StatelessWidget {
 }
 
 class EditUserPageForm extends StatefulWidget {
-
-  // UserTextFormField(user, TextInputType.name, Constants.nome, 'Nome Invalido', user.name),
-  //var user, textInputType, userNewProperty, labelText, invalidValueName;
-
-  //EditUserPageForm(this.user, this.textInputType, this.labelText, this.invalidValueName, this.userNewProperty);
   @override
   EditUserPageFormState createState() => EditUserPageFormState();
 
 }
 
 class EditUserPageFormState extends State<EditUserPageForm> {
-
-  //var user, textInputType, userNewProperty, labelText, invalidValueName;
-
-  //EditUserPageFormState(this.user, this.textInputType, this.labelText, this.invalidValueName, this.userNewProperty);
 
   @override
   Widget build(BuildContext context) {

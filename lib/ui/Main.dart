@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movieapp/ui/views/UserPages/FavoriteMoviesPage.dart';
+import 'package:movieapp/ui/views/UserPages/MoviesPage.dart';
 import 'package:movieapp/ui/views/UserPages/UserPage.dart';
 import 'package:movieapp/ui/views/UserPages/RatePage.dart';
 import 'package:movieapp/ui/views/UserPages/SugestionPage.dart';
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       '/User': (context) => MaintainUserPage(),
       '/RatePage': (context) => RatePage(),
       '/SugestionPage': (context) => SugestionPage(),
-      '/FavoriteMovies': (context) => FavoriteMoviesPage(),
+      '/MoviesPage': (context) => MoviesPage(),
     };
   }
 }

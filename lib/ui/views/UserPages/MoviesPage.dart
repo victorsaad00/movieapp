@@ -5,18 +5,18 @@ import '../../../constants.dart';
 // FavoriteFilmsPage
 // FavoriteFilmsPageForm
 // FavoriteFilmsPageFormState
-class FavoriteMoviesPage extends StatelessWidget {
+class MoviesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Filmes Favoritos'),
+        title: Text('Film Title'),
       ),
       body: Column(
         children: <Widget>[
           Spacer(),
           Constants.spaceSmallHeight,
-          FavoriteMoviesPageForm(),
+          MoviesPageForm(),
           Spacer(),
         ],
       ),
@@ -24,12 +24,12 @@ class FavoriteMoviesPage extends StatelessWidget {
   }
 }
 
-class FavoriteMoviesPageForm extends StatefulWidget {
+class MoviesPageForm extends StatefulWidget {
   @override
-  FavoriteFilmsPageFormState createState() => FavoriteFilmsPageFormState();
+  FilmsPageFormState createState() => FilmsPageFormState();
 }
 
-class FavoriteFilmsPageFormState extends State<FavoriteMoviesPageForm> {
+class FilmsPageFormState extends State<MoviesPageForm> {
   @override
   Widget build(BuildContext context) {
     return Container(
